@@ -2,7 +2,7 @@ package main
 
 import (
 	"fmt"
-	stack "pkg/stacker"
+	stack "go_start/004_data_str/stack/stacker"
 )
 
 func main() {
@@ -10,6 +10,7 @@ func main() {
 	myStack.Push("hay")
 	myStack.Push(15)
 	myStack.Push([]string{"pin", "clip", "needle"})
+	fmt.Println(myStack.Top())
 	for {
 		item, err := myStack.Pop()
 		if err != nil {
