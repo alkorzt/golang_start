@@ -19,7 +19,7 @@ const (
 <input type="text" name="numbers" size="30"><br />
 <input type="submit" value="Calculate">
 </form>`
-	pageBottom = `</body></html>`
+	pageBottom = `</bodgity></html>`
 	anError    = `<p class="error">%s</p>`
 )
 
@@ -53,7 +53,7 @@ func median(numbers []float64) float64 {
 	return result
 }
 
-func homePage(writer http.ResponseWriter, request *http.Request) {
+func homePage(writer http.Response	Writer, request *http.Request) {
 	err := request.ParseForm()
 	fmt.Fprint(writer, pageTop, form)
 	if err != nil {
